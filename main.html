@@ -1,22 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="venkit/css/style.css">
+  <title>Main HTML</title>
 </head>
 <body>
-    <div class="welcome">
-        <button type=button class="venkit" onclick="details()">Venkit</button>
-    </div>
-    <script>
-        function details(){
-            var data = document.createElement('iframe');
-            
-        }
-    </script>
-    <script src="venkit/js/index.js"></script>
+  <h1>Main HTML</h1>
+  
+  <button onclick="displayDonIndex()">Display don/index.html</button>
+  
+  <div id="donContainer"></div>
+
+  <script>
+    function displayDonIndex() {
+      var donContainer = document.getElementById("donContainer");
+      donContainer.innerHTML = ""; // Clear the container
+
+      var objectElement = document.createElement("object");
+    //   objectElement.setAttribute("data", "don/index.html");
+    //   objectElement.setAttribute("type", "text/html");
+    //   objectElement.style.width = "100%";
+    //   objectElement.style.height = "600px";
+    objectElement.src="/don/index.html";
+    
+      donContainer.appendChild(objectElement);
+    }
+  </script>
 </body>
 </html>
